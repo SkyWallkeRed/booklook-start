@@ -12,7 +12,8 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
             <div class="page-header">
-                <h1>BookLook <i class="fa fa-eye"></i></h1>
+                <p>Click to Clear</p>
+                <h1 class="lookBookHeader"> BookLook <i class="fa fa-eye"></i></h1>
             </div>
 
             <div class="book">
@@ -31,47 +32,19 @@
         </div>
     </div>
 
-    <!-- <script  type="text/x-handlebars-template">
-      {{#each items}} -->
-
-    <div class="bookD">
-        <!-- <h1>{{ volumeInfo.title}}  </h1>
-            <h2> {{volumeInfo.authors}}  </h2>
-            <p> {{volumeInfo.description}}  </p>
-            <img src="  data.items[i].volumeInfo.previewLink  " alt=""> -->
-    </div>
-    <!-- 
-      {{/each}}
-
-    </script> -->
-
-    <!-- ######################  handlebars  #################### -->
-
-
-
     <script id="display-template" type="text/x-handlebars-template">
+
+        <h2 class="bookTitle" data-isbn="{{isbn}}">{{title}}</h2>
         <div>
-            <h2 class="bookTitle" data-isbn="{{isbn}}">{{title}}</h2>
             <h3>{{authors}}</h3>
             <p>{{description}}</p>
             <img src="{{img}}" alt="">
+            <hr>
+            <hr>
+            <hr>
         </div>
 
     </script>
-    <!-- ########################################### -->
-    <!-- <script id="display-template2" type="text/x-handlebars-template">
-        <div>
-            <h2 class="bookTitle" data-isbn="{{isbn}}">{{title}}</h2>
-            <h3>{{authors}}</h3>
-            <p>{{description}}</p>
-            <img src="{{img}}" alt="">
-        </div>
-
-    </script> -->
-
-
-    <!-- #######################   handlebars END  #################### -->
-
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
