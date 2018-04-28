@@ -1,36 +1,82 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title></title>
+    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title></title>
 </head>
+
 <body>
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
-      <div class="page-header">
-        <h1>BookLook <i class="fa fa-eye"></i></h1>
-      </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+            <div class="page-header">
+                <h1>BookLook <i class="fa fa-eye"></i></h1>
+            </div>
 
-      <div class="book">
-      </div>
+            <div class="book">
+            </div>
 
-      <form>
-        <h3>Enter ISBN Number</h3>
+            <form>
+                <h3>Enter ISBN Number</h3>
 
-        <div class="form-group">
-          <input type="text" id="isbn" class="form-control" placeholder="ISBN Number">
+                <div class="form-group">
+                    <input type="text" id="isbn" class="form-control" placeholder="ISBN Number / Book title / Book subject">
+                </div>
+
+                <button type="button" class="btn btn-primary search-book">Search</button>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- <script  type="text/x-handlebars-template">
+      {{#each items}} -->
+
+    <div class="bookD">
+        <!-- <h1>{{ volumeInfo.title}}  </h1>
+            <h2> {{volumeInfo.authors}}  </h2>
+            <p> {{volumeInfo.description}}  </p>
+            <img src="  data.items[i].volumeInfo.previewLink  " alt=""> -->
+    </div>
+    <!-- 
+      {{/each}}
+
+    </script> -->
+
+    <!-- ######################  handlebars  #################### -->
+
+
+
+    <script id="display-template" type="text/x-handlebars-template">
+        <div>
+            <h2 class="bookTitle" data-isbn="{{isbn}}">{{title}}</h2>
+            <h3>{{authors}}</h3>
+            <p>{{description}}</p>
+            <img src="{{img}}" alt="">
         </div>
 
-        <button type="button" class="btn btn-primary search-book">Search</button>
-      </form>
+    </script>
+    <!-- ########################################### -->
+    <!-- <script id="display-template2" type="text/x-handlebars-template">
+        <div>
+            <h2 class="bookTitle" data-isbn="{{isbn}}">{{title}}</h2>
+            <h3>{{authors}}</h3>
+            <p>{{description}}</p>
+            <img src="{{img}}" alt="">
+        </div>
 
-    </div>
-  </div>
+    </script> -->
 
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
-  <script src="script.js"></script>
+
+    <!-- #######################   handlebars END  #################### -->
+
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
